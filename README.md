@@ -20,7 +20,7 @@ Com o novo fluxo em Python, o mesmo volume de dados passou a ser tratado e audit
 3. Aplicação de regras de exclusão por telefone, segmento e siglas  
 4. Consolidação da base final (Tabelão_Final.xlsx)  
 5. Geração de amostra segmentada por origem e região  
-6. Geração de segunda amostra sem repetição de IDs  
+6. Geração de segunda e terceira amostra sem repetição de IDs  
 
 ---
 
