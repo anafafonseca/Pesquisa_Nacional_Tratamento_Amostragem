@@ -1,6 +1,6 @@
 # Projeto – Pesquisa Nacional (Tratamento e Amostragem)
 
-Automação completa em Python para tratamento, consolidação e geração de amostras de grandes bases de dados da Pesquisa Nacional.  
+Automação completa em Python para tratamento, consolidação e geração de **três amostras** de grandes bases de dados da Pesquisa Nacional.  
 O projeto foi desenvolvido para padronizar seis fontes distintas, totalizando mais de 100 mil registros brutos, aplicando regras de exclusão, limpeza e amostragem controlada.
 
 ---
@@ -19,8 +19,8 @@ Com o novo fluxo em Python, o mesmo volume de dados passou a ser tratado e audit
 2. Limpeza e normalização de campos  
 3. Aplicação de regras de exclusão por telefone, segmento e siglas  
 4. Consolidação da base final (Tabelão_Final.xlsx)  
-5. Geração de amostra segmentada por origem e região  
-6. Geração de segunda e terceira amostra sem repetição de IDs  
+5. Geração de três amostras segmentadas por origem e região  
+6. Controle de não repetição de IDs entre as amostras  
 
 ---
 
@@ -46,12 +46,13 @@ Pesquisa_Nacional_Tratamento/
 Responsável por todo o tratamento das planilhas: exclusão de registros inválidos, limpeza de textos, padronização de colunas e consolidação dos arquivos em uma base única (Tabelão_Final.xlsx).
 
 ### segmentado.py  
-Executa a geração de uma amostra proporcional por origem e região, com metas predefinidas.  
+Executa a geração da **primeira amostra proporcional** por origem e região, com metas predefinidas.  
 O script aplica alocação proporcional, sorteio aleatório e priorização de compradores, além de gerar planilhas de auditoria automáticas (Amostra_Final_OrigemFixa.xlsx).
 
 ### amostra_2.py  
-Cria uma segunda amostra sem repetir IDs da anterior, respeitando novamente as metas por origem e aplicando a lógica de seleção de contatos principais.  
-A saída é registrada no arquivo Amostra_2_SemRepetir.xlsx.
+Cria as **amostras subsequentes** (segunda e terceira), sem repetir IDs já utilizados.  
+Respeita novamente as metas por origem e aplica a lógica de seleção de contatos principais.  
+As saídas são registradas nos arquivos Amostra_2_SemRepetir.xlsx e Amostra_3_SemRepetir.xlsx.
 
 ---
 
@@ -59,6 +60,7 @@ A saída é registrada no arquivo Amostra_2_SemRepetir.xlsx.
 
 - Processamento e automação de mais de 100 mil linhas brutas  
 - Redução de execução manual de 30 dias para poucos minutos  
+- Geração de três amostras controladas e auditáveis  
 - Uso de Pandas e NumPy para manipulação e sorteio proporcional  
 - Exportação multi-aba com controle de auditoria (xlsxwriter)  
 - Estrutura modular e reaproveitável para futuras execuções  
@@ -76,11 +78,12 @@ Python · Pandas · NumPy · OS · Truststore · Excel Automation
 
 - Padronização de seis fontes distintas em um formato único  
 - Automação completa do fluxo de tratamento e amostragem  
-- Geração de amostras balanceadas, auditáveis e sem repetição  
+- Geração de três amostras balanceadas, auditáveis e sem repetição  
 - Aumento expressivo de eficiência operacional e qualidade dos dados  
 
 ---
 
 **Autora:** Ana Fonseca  
 Engenharia de Dados | Automação e Qualidade de Dados
+
 
